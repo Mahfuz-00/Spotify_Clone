@@ -20,7 +20,7 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       // App bar with a title indicating the page is for the Profile
       appBar: const BasicAppbar(
-        backgroundColor: Color(0xff2C2B2B),
+        backgroundColor: Colors.green,
         title: Text('Profile'),
       ),
       body: Column(

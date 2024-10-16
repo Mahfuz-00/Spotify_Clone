@@ -33,7 +33,8 @@ class NewsSongs extends StatelessWidget {
 
               if (state is NewsSongsLoaded) {
                 // If the state is loaded, display the list of songs
-                return _songs(state.songs);
+                return Padding(padding: EdgeInsets.only(left: 20),
+                child: _songs(state.songs));
               }
 
               // Return an empty container if the state is neither loading nor loaded
