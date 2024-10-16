@@ -15,6 +15,11 @@ import 'package:flutter/foundation.dart'
 /// );
 /// ```
 class DefaultFirebaseOptions {
+  /// Retrieves the appropriate [FirebaseOptions] for the current platform.
+  ///
+  /// - If running on the web, returns the web-specific options.
+  /// - For Android, iOS, and macOS, it returns the corresponding options.
+  /// - Throws [UnsupportedError] if the platform is Linux or unsupported.
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
       return web;
@@ -40,6 +45,7 @@ class DefaultFirebaseOptions {
     }
   }
 
+  /// Firebase configuration for web applications.
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyDwxQPdGbSiD5dcVGh88R23lGMImKCxtKs',
     appId: '1:426509858399:web:4b4738cef4e35016264dea',
@@ -49,6 +55,7 @@ class DefaultFirebaseOptions {
     storageBucket: 'spotify0101.appspot.com',
   );
 
+  /// Firebase configuration for Android applications.
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAwAF_v-n8bHO0Nrf_x0VvqALRxIN436OM',
     appId: '1:426509858399:android:a9f0dd91f4d88cb2264dea',
@@ -57,6 +64,7 @@ class DefaultFirebaseOptions {
     storageBucket: 'spotify0101.appspot.com',
   );
 
+  /// Firebase configuration for iOS applications.
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBumD8nn8O9ISMsaxhBT-duBGi1YSZAsSk',
     appId: '1:426509858399:ios:78d9d14dc192a583264dea',
@@ -66,6 +74,7 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.spotify',
   );
 
+  /// Firebase configuration for macOS applications.
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyBumD8nn8O9ISMsaxhBT-duBGi1YSZAsSk',
     appId: '1:426509858399:ios:78d9d14dc192a583264dea',
@@ -75,6 +84,7 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.spotify',
   );
 
+  // Firebase configuration for Windows applications.
   static const FirebaseOptions windows = FirebaseOptions(
     apiKey: 'AIzaSyDwxQPdGbSiD5dcVGh88R23lGMImKCxtKs',
     appId: '1:426509858399:web:7367e344006c4003264dea',
